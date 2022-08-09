@@ -101,16 +101,11 @@ export default function ContactUs() {
       </nav>
       <header className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 lg:px-40 bg-blue-50 dark:bg-blue-900 md:h-96">
         <div className="mx-auto mb-10 md:mt-20">
-          <div className="badge bg-green-500 inline-block rounded-xl">
-            <p className="font-light text-base px-4 py-1 text-gray-50">
-              Discutons
-            </p>
-          </div>
           <h1 className="text-4xl font-bold mt-4 dark:text-gray-50 text-gray-700">
-            Envoyez-nous un message.
+            Entrons en contact.
           </h1>
           <p className="text-sm text-gray-700 mt-4 font-light dark:text-gray-200">
-            Complétez le formulaire et envoyez-nous votre message.
+            Complétez le formulaire et envoyez-nous votre message.<br></br>
             Nous vous répondrons le plus tôt possible.
           </p>
         </div>
