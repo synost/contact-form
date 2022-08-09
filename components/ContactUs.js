@@ -224,7 +224,7 @@ export default function ContactUs() {
             )}
             {showFailureMessage && (
               <p className="text-red-500">
-                Oops ! Quelque chose ne s'est pas passé comme prévu. Merci de réesayer.
+                Oops ! Quelque chose ne s est pas passé comme prévu. Merci de réesayer.
               </p>
             )}
           </div>
