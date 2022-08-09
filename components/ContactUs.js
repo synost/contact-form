@@ -235,7 +235,7 @@ export default function ContactUs() {
           <div className="text-left">
             {showSuccessMessage && (
               <p className="text-green-500 font-semibold text-sm my-2">
-                {t('form.succes')}
+                {t('form.success')}
               </p>
             )}
             {showFailureMessage && (

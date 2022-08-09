@@ -13,6 +13,8 @@
         "message": "Message",
         "noempty": "This field cannot be empty.",
         "send": "Send",
-        "sending": "Sending"
+        "sending": "Sending",
+        "success": "Thank you! Your Message has been delivered.",
+        "error": "Oops! Something went wrong, please try again."
     }    
 }

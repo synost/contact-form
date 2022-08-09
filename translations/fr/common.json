@@ -13,6 +13,8 @@
         "message": "Message",
         "noempty": "Ce champ ne peut pas être vide.",
         "send": "Envoyer",
-        "sending": "Envoi"
+        "sending": "Envoi",
+        "success": "Merci ! Votre message a bien été envoyé.",
+        "error": "Oops! Une erreur est survenue, merci de réessayer."
     }    
 }
