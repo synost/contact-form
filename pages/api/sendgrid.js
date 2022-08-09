@@ -23,12 +23,12 @@ const mailer = Mailer(mailerConfig)
 
 async function sendEmail(req, res, ) {
   try {
-    await mailer.send(mailOptions, function(err, data) {
-      if (err) {
-        console.log("Error " + err);
-      } else {
-        console.log("Email sent successfully");
-      }
+    let info = await transporter.sendMail({
+      from: '"James Swanson" <foo@example.com>',
+      to: "rickie.gutkowski59@ethereal.email", // Test email address
+      subject: "I love SMTP!",
+      text: "Here's a text version of the email.",
+      html: "Here's an <strong>HTML version</strong> of the email.",
     });
   }
   catch (error) {
