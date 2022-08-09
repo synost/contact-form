@@ -1,5 +1,14 @@
 {
     "welcome": {
-        "title": "Test EN"
-    }
+        "title": "Test EN",
+        "help": "help EN"
+    },
+    "form": {
+        "title": "Send a message",
+        "fisrtname": "First Name",
+        "lastname": "Last Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+    }    
 }

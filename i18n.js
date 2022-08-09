@@ -2,7 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 //import XHR from "i18next-http-backend";
-import common_fr from "./translations/fr-FR/common.json";
+import common_fr from "./translations/fr/common.json";
 import common_en from "./translations/en/common.json";
 
 // the translations

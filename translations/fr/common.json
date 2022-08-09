@@ -1,0 +1,14 @@
+{
+    "welcome": {
+        "title": "Test FR",
+        "help": "help FR"
+    },
+    "form": {
+        "title": "Envoyer un message",
+        "fisrtname": "Prénom",
+        "lastname": "Nom",
+        "email": "Email",
+        "subject": "Objet",
+        "message": "Message"
+    }    
+}

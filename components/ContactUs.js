@@ -118,8 +118,7 @@ export default function ContactUs() {
             {t('welcome.title')}
           </h1>
           <p className="text-sm text-gray-700 mt-4 font-light dark:text-gray-200">
-            Complétez le formulaire et envoyez-nous votre message.<br></br>
-            Nous vous répondrons le plus tôt possible.
+            {t('welcome.help')}
           </p>
         </div>
         <form
@@ -127,14 +126,14 @@ export default function ContactUs() {
           className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
         >
           <h1 className="text-2xl font-bold dark:text-gray-50">
-            Envoyer un message
+          {t('form.title')}
           </h1>
 
           <label
             htmlFor="firstname"
             className="text-gray-500 font-light mt-8 dark:text-gray-50"
           >
-            Prénom<span className="text-red-500 dark:text-gray-50">*</span>
+            {t('form.firstname')}<span className="text-red-500 dark:text-gray-50">*</span>
           </label>
           <input
             type="text"
@@ -146,14 +145,14 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.firstname && (
-            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
+            <p className="text-red-500">{t('form.noempty')}</p>
           )}
 
           <label
             htmlFor="lastname"
             className="text-gray-500 font-light mt-8 dark:text-gray-50"
           >
-            Nom<span className="text-red-500 dark:text-gray-50">*</span>
+            {t('form.lastname')}<span className="text-red-500 dark:text-gray-50">*</span>
           </label>
           <input
             type="text"
@@ -165,14 +164,14 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.lastname && (
-            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
+            <p className="text-red-500">{t('form.noempty')}</p>
           )}
 
           <label
             htmlFor="email"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            E-mail<span className="text-red-500">*</span>
+            {t('form.email')}<span className="text-red-500">*</span>
           </label>
           <input
             type="email"
@@ -184,14 +183,14 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.email && (
-            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
+            <p className="text-red-500">{t('form.noempty')}</p>
           )}
 
           <label
             htmlFor="subject"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            Objet<span className="text-red-500">*</span>
+            {t('form.subject')}<span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -203,13 +202,13 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.subject && (
-            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
+            <p className="text-red-500">{t('form.noempty')}</p>
           )}
           <label
             htmlFor="message"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            Message<span className="text-red-500">*</span>
+            {t('form.message')}<span className="text-red-500">*</span>
           </label>
           <textarea
             name="message"
@@ -220,7 +219,7 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           ></textarea>
           {errors?.message && (
-            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
+            <p className="text-red-500">{t('form.noempty')}</p>
           )}
           <div className="flex flex-row items-center justify-start">
             <button
@@ -234,12 +233,12 @@ export default function ContactUs() {
           <div className="text-left">
             {showSuccessMessage && (
               <p className="text-green-500 font-semibold text-sm my-2">
-                Merci ! Votre message a bien été envoyé.
+                {t('form.succes')}
               </p>
             )}
             {showFailureMessage && (
               <p className="text-red-500">
-                Oops ! Quelque chose ne s&apos;est pas passé comme prévu. Merci de réessayer.
+                {t('form.error')}
               </p>
             )}
           </div>
