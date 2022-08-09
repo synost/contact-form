@@ -56,7 +56,7 @@ export default function ContactUs() {
 
     if (isValidForm) {
       setButtonText("Envoi");
-      const res = await fetch("/api/sendgrid", {
+      const res = await fetch("/api/send", {
         body: JSON.stringify({
           email: email,
           firstname: firstname,
@@ -236,7 +236,7 @@ export default function ContactUs() {
             )}
             {showFailureMessage && (
               <p className="text-red-500">
-                Oops ! Quelque chose ne s est pas passé comme prévu. Merci de réesayer.
+                Oops ! Quelque chose ne s&apos;est pas passé comme prévu. Merci de réessayer.
               </p>
             )}
           </div>
