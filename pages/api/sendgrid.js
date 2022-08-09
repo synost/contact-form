@@ -2,16 +2,16 @@ const nodemailer = require("nodemailer"); // Require the Nodemailer package
 async function main() {
   // SMTP config
   const transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email", //
+    host: "smtp.zoho.eu", //
     port: 587,
     auth: {
-      user: "lea81@ethereal.email", // Your Ethereal Email address
-      pass: "cU7mJqBdUAAQEDtVyv", // Your Ethereal Email password
+      user: "contact@streato.com", // Your Ethereal Email address
+      pass: "Streato4723!", // Your Ethereal Email password
     },
   }); // Send the email
   let info = await transporter.sendMail({
-    from: '"James Swanson" <foo@example.com>',
-    to: "rickie.gutkowski59@ethereal.email", // Test email address
+    from: '"James Swanson" <contact@streato.com>',
+    to: "admin@synost.net", // Test email address
     subject: "I love SMTPOP!",
     text: "Here's a text version of the email.",
     html: "Here's an <strong>HTML version</strong> of the email.",
@@ -21,5 +21,3 @@ async function main() {
 }
 // Catch any errors and output them to the console
 main().catch(console.error);
-
-COPY
