@@ -119,7 +119,8 @@ export default function ContactUs() {
             {t('welcome.title')}
           </h1>
           <p className="text-sm text-gray-700 mt-4 font-light dark:text-gray-200">
-            {t('welcome.help_up')}
+            {t('welcome.help_up')}<br></br>
+            {t('welcome.help_down')}
           </p>
         </div>
         <form
