@@ -1,7 +1,8 @@
 {
     "welcome": {
         "title": "Lets talk",
-        "help": "Fill the form and send in your queries. We will respond as soon as we can"
+        "help_up": "Fill the form and send in your queries.",
+        "help_down": "We will respond as soon as we can."
     },
     "form": {
         "title": "Send a message",

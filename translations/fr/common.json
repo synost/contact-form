@@ -1,7 +1,8 @@
 {
     "welcome": {
-        "title": "",
-        "help": "help FR"
+        "title": "Entrons en contact",
+        "help_up": "Complétez le formulaire et envoyez-nous votre message. Nous vous répondrons le plus tôt possible.",
+        "help_down": "Nous vous répondrons le plus tôt possible."
     },
     "form": {
         "title": "Envoyer un message",
