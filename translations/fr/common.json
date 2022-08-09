@@ -1,15 +1,17 @@
 {
     "welcome": {
-        "title": "Test FR",
+        "title": "",
         "help": "help FR"
     },
     "form": {
         "title": "Envoyer un message",
-        "fisrtname": "Prénom",
+        "firstname": "Prénom",
         "lastname": "Nom",
         "email": "Email",
         "subject": "Objet",
-        "message": "Message"
-        ""
+        "message": "Message",
+        "noempty": "Ce champ ne peut pas être vide.",
+        "send": "Envoyer",
+        "sending": "Envoi"
     }    
 }

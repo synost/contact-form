@@ -10,11 +10,13 @@ export default function ContactUs() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  //   Internationalization
+  const {t, i18n} = useTranslation('common');
   //   Form validation
   const [errors, setErrors] = useState({});
 
   //   Setting button text
-  const [buttonText, setButtonText] = useState("Envoyer");
+  const [buttonText, setButtonText] = useState(t('form.send'));
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
@@ -57,7 +59,7 @@ export default function ContactUs() {
     let isValidForm = handleValidation();
 
     if (isValidForm) {
-      setButtonText("Envoi");
+      setButtonText(t('form.sending'));
       const res = await fetch("/api/send", {
         body: JSON.stringify({
           email: email,
@@ -77,7 +79,7 @@ export default function ContactUs() {
         console.log(error);
         setShowSuccessMessage(false);
         setShowFailureMessage(true);
-        setButtonText("Envoyer");
+        setButtonText(t('form.send'));
 
         // Reset form fields
         setFirstname("");
@@ -89,7 +91,7 @@ export default function ContactUs() {
       }
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
-      setButtonText("Envoyer");
+      setButtonText(t('form.send'));
       // Reset form fields
       setFirstname("");
       setLastname("");
@@ -99,7 +101,6 @@ export default function ContactUs() {
     }
     console.log(firstname, lastname, email, subject, message);
   };
-  const {t, i18n} = useTranslation('common');
   return (
     <main>
       <nav className="flex flex-row justify-between items-center p-8 bg-blue-50 dark:bg-blue-900">

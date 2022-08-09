@@ -1,15 +1,17 @@
 {
     "welcome": {
-        "title": "Test EN",
-        "help": "help EN"
+        "title": "Lets talk",
+        "help": "Fill the form and send in your queries. We will respond as soon as we can"
     },
     "form": {
         "title": "Send a message",
-        "fisrtname": "First Name",
+        "firstname": "First Name",
         "lastname": "Last Name",
         "email": "Email",
         "subject": "Subject",
         "message": "Message",
-        "noempty": "This field cannot be empty !"
+        "noempty": "This field cannot be empty.",
+        "send": "Send",
+        "sending": "Sending"
     }    
 }
