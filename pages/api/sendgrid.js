@@ -3,8 +3,16 @@ import { Options as TransportOptions, SentMessageInfo } from 'nodemailer/lib/smt
 import { ReactElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { Mailer } from 'nodemailer-react'
-import { ContactEmail } from './ContactEmail'
-import sendgrid from "@sendgrid/mail";
+
+const ContactEmail = ({ firstname }) => ({
+  subject: `👋 synost`,
+  body: (
+    <div>
+      <p>Hello synost!</p>
+      <p>Hope you ll enjoy the package!</p>
+    </div>
+  )
+})
 
 const mailerConfig = {
   transport: {
@@ -18,16 +26,11 @@ const mailerConfig = {
   },
 }
 
-const emailsList = {
-  ContactEmail,
-  
-}
-
 /** Instance of mailer to export */
-const mailer = Mailer(mailerConfig, emailsList)
+const mailer = Mailer(mailerConfig)
 async function sendEmail(req, res) {
   try {
-    await mailer.send('PasswordEmail', {
+    await mailer.send('ContactEmail', {
       firstName: 'Mathieu',
       brand: 'MyWebsite',
       newAccount: 'true',
