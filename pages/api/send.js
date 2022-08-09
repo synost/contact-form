@@ -5,13 +5,13 @@ async function sendEmail(req, res) {
     host: "smtp.zoho.eu", //
     port: 587,
     auth: {
-      user: "contact@streato.com", // Your Ethereal Email address
-      pass: "Streato4723!", // Your Ethereal Email password
+      user: {{process.env.NODE_ENV}}, // Your Ethereal Email address
+      pass: "!", // Your Ethereal Email password
     },
   }); // Send the email
   try {
     let info = await transporter.sendMail({
-      from: '"Contact TheReplay78" <contact@streato.com>',
+      from: '"Contact TheReplay78" <c>',
       to: "ts.lochet@icloud.com", // Test email address
       subject: `${req.body.subject}`,
       text: "Here's a text version of the email.",

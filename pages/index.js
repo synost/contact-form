@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import ContactUs from "../components/ContactUs";
-import styles from "../styles/Home.module.css";
+import '../i18n';
 
 export default function Home() {
   return (

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Image from 'next/image'
 import profilePic from '../public/thereplay78.png'
+import { useTranslation } from 'react-i18next';
+
 export default function ContactUs() {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -97,6 +99,7 @@ export default function ContactUs() {
     }
     console.log(firstname, lastname, email, subject, message);
   };
+  const {t, i18n} = useTranslation('common');
   return (
     <main>
       <nav className="flex flex-row justify-between items-center p-8 bg-blue-50 dark:bg-blue-900">
@@ -112,7 +115,7 @@ export default function ContactUs() {
       <header className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 lg:px-40 bg-blue-50 dark:bg-blue-900 md:h-96">
         <div className="mx-auto mb-10 md:mt-20">
           <h1 className="text-4xl font-bold mt-4 dark:text-gray-50 text-gray-700">
-            Entrons en contact.
+            {t('welcome.title')}
           </h1>
           <p className="text-sm text-gray-700 mt-4 font-light dark:text-gray-200">
             Complétez le formulaire et envoyez-nous votre message.<br></br>
