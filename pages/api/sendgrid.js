@@ -1,12 +1,43 @@
+import { createTransport, SendMailOptions, Transporter } from 'nodemailer'
+import { Options as TransportOptions, SentMessageInfo } from 'nodemailer/lib/smtp-transport'
+import { ReactElement } from 'react'
+import { renderToStaticMarkup } from 'react-dom/server'
+import { Mailer } from 'nodemailer-react'
+import { PasswordEmail } from './PasswordEmail'
+import { ReminderEmail } from './ReminderEmail'
 import sendgrid from "@sendgrid/mail";
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+const mailerConfig = {
+  transport: {
+    host: 'smtp.zoho.eu',
+    port: 587,
+    secure: true,
+    auth: { user: 'contact@streato.com', pass: 'Streato4723!' },
+  },
+  defaults: {
+    from: { name: 'Streato', address: 'contact@streato.com' },
+  },
+}
+
+const emailsList = {
+  ContactEmail,
+  
+}
+
+/** Instance of mailer to export */
+const mailer = Mailer(mailerConfig, emailsList)
 
 async function sendEmail(req, res) {
-  // NOTE: Uncomment the below lines to make the code work
 
-  // try {
-  //   await sendgrid.send({
+  try {
+    await mailer.send('PasswordEmail', {
+      firstName: 'Mathieu',
+      brand: 'MyWebsite',
+      newAccount: 'true',
+      password: 'pass',
+    }, {
+      to: 'admin@synost.net',
+    })
   //     to: "youremail@gmail.com", // Your email where you'll receive emails
   //     from: "anotheremail@gmail.com", // your website email address here
   //     subject: `[Lead from website] : ${req.body.subject}`,
