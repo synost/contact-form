@@ -18,3 +18,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+content {
+  position: relative;
+}
+content img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import Image from 'next/image'
+import profilePic from '../public/thereplay78.png'
 export default function ContactUs() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
@@ -92,8 +93,11 @@ export default function ContactUs() {
     <main>
       <nav className="flex flex-row justify-between items-center p-8 bg-blue-50 dark:bg-blue-900">
         <div className="relative flex flex-row space-x-2 items-center">
-          <h1 className="pl-8 text-2xl font-bold italic text-gray-700 dark:text-gray-50">
-            TheReplay78
+          <div className="absolute top-0 left-1">
+          <Image src={profilePic} alt="Logo" width={33} height={33}/>
+          </div>
+          <h1 className="pl-8 text-2xl font-bold text-gray-700 dark:text-gray-50">
+            &nbsp;TheReplay78
           </h1>
         </div>
       </nav>
@@ -194,19 +198,7 @@ export default function ContactUs() {
               className="px-10 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center"
             >
               {buttonText}
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="text-cyan-500 ml-2"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.00967 5.12761H11.0097C12.1142 5.12761 13.468 5.89682 14.0335 6.8457L16.5089 11H21.0097C21.562 11 22.0097 11.4477 22.0097 12C22.0097 12.5523 21.562 13 21.0097 13H16.4138L13.9383 17.1543C13.3729 18.1032 12.0191 18.8724 10.9145 18.8724H8.91454L12.4138 13H5.42485L3.99036 15.4529H1.99036L4.00967 12L4.00967 11.967L2.00967 8.54712H4.00967L5.44417 11H12.5089L9.00967 5.12761Z"
-                  fill="currentColor"
-                />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="-5 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             </button>
           </div>
           <div className="text-left">
