@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>Sendgrid Contact Form</title>
+        <title>TheReplay78</title>
         <meta
           name="description"
           content="A working contact form with Sendgrid integration and form validations."

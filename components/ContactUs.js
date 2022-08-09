@@ -95,7 +95,7 @@ export default function ContactUs() {
           <div className="absolute h-6 w-4 bg-blue-500 z-10"></div>
           <div className="absolute top-0 left-1 h-6 w-4 bg-green-500"></div>
           <h1 className="pl-8 text-2xl font-bold italic text-gray-700 dark:text-gray-50">
-            AceContact
+            TheReplay78
           </h1>
         </div>
         <div className="flex flex-row items-center space-x-8">
@@ -207,14 +207,14 @@ export default function ContactUs() {
           className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
         >
           <h1 className="text-2xl font-bold dark:text-gray-50">
-            Send a message
+            Envoyer un message
           </h1>
 
           <label
             htmlFor="fullname"
             className="text-gray-500 font-light mt-8 dark:text-gray-50"
           >
-            Full name<span className="text-red-500 dark:text-gray-50">*</span>
+            Nom et Prénom<span className="text-red-500 dark:text-gray-50">*</span>
           </label>
           <input
             type="text"
@@ -226,7 +226,7 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.fullname && (
-            <p className="text-red-500">Fullname cannot be empty.</p>
+            <p className="text-red-500">Ce champs ne peut pas être vide.</p>
           )}
 
           <label
@@ -245,14 +245,14 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.email && (
-            <p className="text-red-500">Email cannot be empty.</p>
+            <p className="text-red-500">Ce champs ne peut pas être vide.</p>
           )}
 
           <label
             htmlFor="subject"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            Subject<span className="text-red-500">*</span>
+            Objet<span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -264,7 +264,7 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.subject && (
-            <p className="text-red-500">Subject cannot be empty.</p>
+            <p className="text-red-500">Ce champs ne peut pas être vide.</p>
           )}
           <label
             htmlFor="message"
@@ -281,7 +281,7 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           ></textarea>
           {errors?.message && (
-            <p className="text-red-500">Message body cannot be empty.</p>
+            <p className="text-red-500">Ce champs ne peut pas être vide.</p>
           )}
           <div className="flex flex-row items-center justify-start">
             <button
@@ -307,12 +307,12 @@ export default function ContactUs() {
           <div className="text-left">
             {showSuccessMessage && (
               <p className="text-green-500 font-semibold text-sm my-2">
-                Thankyou! Your Message has been delivered.
+                Merci ! Votre message a bien été envoyé.
               </p>
             )}
             {showFailureMessage && (
               <p className="text-red-500">
-                Oops! Something went wrong, please try again.
+                Oops :( Quelque chose ne s'est pas passé comme prévu. Merci de réesayer.
               </p>
             )}
           </div>
