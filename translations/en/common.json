@@ -9,6 +9,7 @@
         "lastname": "Last Name",
         "email": "Email",
         "subject": "Subject",
-        "message": "Message"
+        "message": "Message",
+        "noempty": "This field cannot be empty !"
     }    
 }
