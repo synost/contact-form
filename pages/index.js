@@ -10,7 +10,7 @@ export default function Home() {
         <title>TheReplay78</title>
         <meta
           name="description"
-          content="A working contact form with Sendgrid integration and form validations."
+          content="TheReplay78 - Entrons en contact."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

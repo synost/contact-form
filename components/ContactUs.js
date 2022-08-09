@@ -133,7 +133,7 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.fullname && (
-            <p className="text-red-500">Ce champs ne peut pas être vide.</p>
+            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
           )}
 
           <label
@@ -152,7 +152,7 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.email && (
-            <p className="text-red-500">Ce champs ne peut pas être vide.</p>
+            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
           )}
 
           <label
@@ -171,7 +171,7 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
           {errors?.subject && (
-            <p className="text-red-500">Ce champs ne peut pas être vide.</p>
+            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
           )}
           <label
             htmlFor="message"
@@ -188,7 +188,7 @@ export default function ContactUs() {
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           ></textarea>
           {errors?.message && (
-            <p className="text-red-500">Ce champs ne peut pas être vide.</p>
+            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
           )}
           <div className="flex flex-row items-center justify-start">
             <button
