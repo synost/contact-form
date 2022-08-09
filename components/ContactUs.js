@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Image from 'next/image'
 import profilePic from '../public/thereplay78.png'
 export default function ContactUs() {
-  const [fullname, setFullname] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -20,8 +21,12 @@ export default function ContactUs() {
     let tempErrors = {};
     let isValid = true;
 
-    if (fullname.length <= 0) {
-      tempErrors["fullname"] = true;
+    if (firstname.length <= 0) {
+      tempErrors["firstname"] = true;
+      isValid = false;
+    }
+    if (lastname.length <= 0) {
+      tempErrors["lastname"] = true;
       isValid = false;
     }
     if (email.length <= 0) {
@@ -54,7 +59,8 @@ export default function ContactUs() {
       const res = await fetch("/api/sendgrid", {
         body: JSON.stringify({
           email: email,
-          fullname: fullname,
+          firstname: firstname,
+          lastname: lastname,
           subject: subject,
           message: message,
         }),
@@ -72,7 +78,8 @@ export default function ContactUs() {
         setButtonText("Envoyer");
 
         // Reset form fields
-        setFullname("");
+        setFirstname("");
+        setLastname("");
         setEmail("");
         setMessage("");
         setSubject("");
@@ -82,12 +89,13 @@ export default function ContactUs() {
       setShowFailureMessage(false);
       setButtonText("Envoyer");
       // Reset form fields
-      setFullname("");
+      setFirstname("");
+      setLastname("");
       setEmail("");
       setMessage("");
       setSubject("");
     }
-    console.log(fullname, email, subject, message);
+    console.log(firstname, lastname, email, subject, message);
   };
   return (
     <main>
@@ -120,21 +128,40 @@ export default function ContactUs() {
           </h1>
 
           <label
-            htmlFor="fullname"
+            htmlFor="firstname"
             className="text-gray-500 font-light mt-8 dark:text-gray-50"
           >
-            Nom et Prénom<span className="text-red-500 dark:text-gray-50">*</span>
+            Prénom<span className="text-red-500 dark:text-gray-50">*</span>
           </label>
           <input
             type="text"
-            value={fullname}
+            value={firstname}
             onChange={(e) => {
-              setFullname(e.target.value);
+              setFirstname(e.target.value);
             }}
-            name="fullname"
+            name="firstname"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           />
-          {errors?.fullname && (
+          {errors?.firstname && (
+            <p className="text-red-500">Ce champ ne peut pas être vide.</p>
+          )}
+
+          <label
+            htmlFor="lastname"
+            className="text-gray-500 font-light mt-8 dark:text-gray-50"
+          >
+            Nom<span className="text-red-500 dark:text-gray-50">*</span>
+          </label>
+          <input
+            type="text"
+            value={lastname}
+            onChange={(e) => {
+              setLastname(e.target.value);
+            }}
+            name="lastname"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+          />
+          {errors?.lastname && (
             <p className="text-red-500">Ce champ ne peut pas être vide.</p>
           )}
 
