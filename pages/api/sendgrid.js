@@ -1,28 +1,15 @@
-import { Mailer } from 'nodemailer-react'
-
-const mailerConfig = {
-  transport: {
-    host: 'smtp.zoho.eu',
-    port: 587,
-    secure: true,
-    auth: { user: 'contact@streato.com', pass: 'Streato4723!' },
-  },
-  defaults: {
-    from: { name: 'Streato', address: 'contact@streato.com' },
-  },
-}
-
-let mailOptions = {
-  from: 'contact@streato.com',
-  to: 'admin@synost.net',
-  subject: 'Nodemailer Project',
-  text: 'Hi from your nodemailer project'
-};
-
-const mailer = Mailer(mailerConfig)
+import nodemailer from 'nodemailer-react'
 
 async function sendEmail(req, res, ) {
   try {
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.ethereal.email',
+      port: 587,
+      auth: {
+          user: 'lea81@ethereal.email',
+          pass: 'cU7mJqBdUAAQEDtVyv'
+      }
+    });
     let info = await transporter.sendMail({
       from: '"James Swanson" <foo@example.com>',
       to: "rickie.gutkowski59@ethereal.email", // Test email address
