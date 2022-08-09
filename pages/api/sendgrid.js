@@ -28,7 +28,6 @@ const emailsList = {
 const mailer = Mailer(mailerConfig, emailsList)
 
 async function sendEmail(req, res) {
-
   try {
     await mailer.send('PasswordEmail', {
       firstName: 'Mathieu',
@@ -38,6 +37,7 @@ async function sendEmail(req, res) {
     }, {
       to: 'admin@synost.net',
     })
+  }
   //     to: "youremail@gmail.com", // Your email where you'll receive emails
   //     from: "anotheremail@gmail.com", // your website email address here
   //     subject: `[Lead from website] : ${req.body.subject}`,
@@ -80,12 +80,11 @@ async function sendEmail(req, res) {
   //     </body>
   //     </html>`,
   //   });
-  // } catch (error) {
-  //   // console.log(error);
-  //   return res.status(error.statusCode || 500).json({ error: error.message });
-  // }
+   } catch (error) {
+      console.log(error);
+     return res.status(error.statusCode || 500).json({ error: error.message });
+   }
 
   return res.status(200).json({ error: "" });
-}
 
 export default sendEmail;

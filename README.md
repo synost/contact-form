@@ -1,18 +1,18 @@
 ## Contact form with SendGrid, Next.js and Tailwindcss
 
 A working contact form for your Next.js application - Integrated with SendGrid's API for sending emails.
-Read the complete blog at [freeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-working-contact-form-with-sendgrid-and-next-js/)
+Read the complete blog at [freeCodeCamp](https:www.freecodecamp.org/news/how-to-build-a-working-contact-form-with-sendgrid-and-next-js/)
 
-![Hompage](https://github.com/manuarora700/sendgrid-contact-form/blob/main/demos/homepage.png)
+![Hompage](https:github.com/manuarora700/sendgrid-contact-form/blob/main/demos/homepage.png)
 
-![Hompage](https://github.com/manuarora700/sendgrid-contact-form/blob/main/demos/email.png)
+![Hompage](https:github.com/manuarora700/sendgrid-contact-form/blob/main/demos/email.png)
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org) for creating a contact form landing page
-- [Tailwindcss](https://tailwindcss.com) for styling the components
-- [SendGrid](https://sendgrid.com) for sending emails using their APIs
-- [Vercel](https://vercel.com) for hosting our application and CI/CD
+- [Next.js](https:nextjs.org) for creating a contact form landing page
+- [Tailwindcss](https:tailwindcss.com) for styling the components
+- [SendGrid](https:sendgrid.com) for sending emails using their APIs
+- [Vercel](https:vercel.com) for hosting our application and CI/CD
 
 ## Application Flow
 
@@ -40,10 +40,10 @@ To store the API keys securely on your Vercel account.
 
 ## Live Demo and Source Code
 
-[Live Demo](https://sendgrid-contact-form.vercel.app/)
-[Source Code](https://github.com/manuarora700/sendgrid-contact-form)
+[Live Demo](https:sendgrid-contact-form.vercel.app/)
+[Source Code](https:github.com/manuarora700/sendgrid-contact-form)
 
-It took me around an hour to build this application from the ground up - all thanks to Next.js, Tailwindcss and SendGrid for their extremely intuitive workflow and API semantics. Also [Tailwind Master Kit](https://tailwindmasterkit.com) for the beautiful Contact Page UI.
+It took me around an hour to build this application from the ground up - all thanks to Next.js, Tailwindcss and SendGrid for their extremely intuitive workflow and API semantics. Also [Tailwind Master Kit](https:tailwindmasterkit.com) for the beautiful Contact Page UI.
 
 # License
 
@@ -51,4 +51,4 @@ This template is completely open source and free to use. Use it for client proje
 
 # Support
 
-<a href="https://www.buymeacoffee.com/manuarora" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https:www.buymeacoffee.com/manuarora" target="_blank"><img src="https:cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
