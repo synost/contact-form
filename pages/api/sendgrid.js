@@ -1,18 +1,4 @@
-import { createTransport, SendMailOptions, Transporter } from 'nodemailer'
-import { Options as TransportOptions, SentMessageInfo } from 'nodemailer/lib/smtp-transport'
-import { ReactElement } from 'react'
-import { renderToStaticMarkup } from 'react-dom/server'
 import { Mailer } from 'nodemailer-react'
-
-const ContactEmail = ({ firstname }) => ({
-  subject: `👋 synost`,
-  body: (
-    <div>
-      <p>Hello synost!</p>
-      <p>Hope you ll enjoy the package!</p>
-    </div>
-  )
-})
 
 const mailerConfig = {
   transport: {
@@ -26,18 +12,24 @@ const mailerConfig = {
   },
 }
 
-/** Instance of mailer to export */
+let mailOptions = {
+  from: 'contact@streato.com',
+  to: 'admin@synost.net',
+  subject: 'Nodemailer Project',
+  text: 'Hi from your nodemailer project'
+};
+
 const mailer = Mailer(mailerConfig)
-async function sendEmail(req, res) {
+
+async function sendEmail(req, res, ) {
   try {
-    await mailer.send('ContactEmail', {
-      firstName: 'Mathieu',
-      brand: 'MyWebsite',
-      newAccount: 'true',
-      password: 'pass',
-    }, {
-      to: 'admin@synost.net',
-    })
+    await mailer.send(mailOptions, function(err, data) {
+      if (err) {
+        console.log("Error " + err);
+      } else {
+        console.log("Email sent successfully");
+      }
+    });
   }
   catch (error) {
       console.log(error);
