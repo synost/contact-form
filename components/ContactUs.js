@@ -15,9 +15,6 @@ export default function ContactUs() {
   //   Form validation
   const [errors, setErrors] = useState({});
 
-  //   Setting button text
-  const [buttonText, setButtonText] = useState(t('form.send'));
-
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
 
@@ -79,7 +76,6 @@ export default function ContactUs() {
         console.log(error);
         setShowSuccessMessage(false);
         setShowFailureMessage(true);
-        setButtonText(t('form.send'));
 
         // Reset form fields
         setFirstname("");
@@ -91,7 +87,6 @@ export default function ContactUs() {
       }
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
-      setButtonText(t('form.send'));
       // Reset form fields
       setFirstname("");
       setLastname("");
@@ -232,10 +227,9 @@ export default function ContactUs() {
           <div className="flex flex-row items-center justify-start">
             <button
               type="submit"
-              className="px-10 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center"
+              className="px-8 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center"
             >
-              {buttonText}
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="-5 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             </button>
           </div>
           <div className="text-left">
@@ -252,6 +246,15 @@ export default function ContactUs() {
           </div>
         </form>
       </header>
+      <footer className="footer-half sub-bg section-padding pb-0">
+                <div clasName="container">
+                    <div className="copyrights text-center">
+                        <p>
+                            Powered by <a href="https://synost.com">Synost</a>
+                        </p>
+                    </div>
+                </div>
+      </footer>
     </main>
   );
 }
