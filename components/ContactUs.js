@@ -246,15 +246,6 @@ export default function ContactUs() {
           </div>
         </form>
       </header>
-      <footer className="footer-half sub-bg section-padding pb-0">
-                <div clasName="container">
-                    <div className="copyrights text-center">
-                        <p>
-                            Powered by <a href="https://synost.com">Synost</a>
-                        </p>
-                    </div>
-                </div>
-      </footer>
     </main>
   );
 }

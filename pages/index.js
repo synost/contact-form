@@ -17,6 +17,15 @@ export default function Home() {
       <main className="">
         <ContactUs />
       </main>
+      <footer className="footer-half sub-bg section-padding pb-0">
+                <div clasName="container">
+                    <div className="copyrights text-center">
+                        <p>
+                            Powered by <a href="https://synost.com">Synost</a>
+                        </p>
+                    </div>
+                </div>
+      </footer>
     </div>
   );
 }

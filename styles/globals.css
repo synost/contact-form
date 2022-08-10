@@ -27,3 +27,23 @@ content img {
   top: 0px;
   right: 0px;
 }
+
+footer {
+  position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100vw;
+    padding-top: 50px;
+}
+
+.footer-half .copyrights p {
+  font-size: 12px;
+  color: #999;
+}
+
+.footer-half .copyrights p a {
+  color: #9375da;
+}
+
