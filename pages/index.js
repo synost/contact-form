@@ -14,15 +14,9 @@ export default function Home() {
             content="TheReplay78 - Entrons en contact."
           />
           <link rel="icon" href="/favicon.ico" />
-          <div
-      style={{
-        backgroundColor: 'blue',
-        width: '100px',
-        height: '100px'
-      }}
         </Head>
         <main className="">
-          <ContactUs />
+        <ContactUs />
         </main>
       </div>
     </ThemeProvider>  
