@@ -136,7 +136,7 @@ export default function ContactUs() {
             htmlFor="firstname"
             className="text-gray-500 font-light mt-8 dark:text-gray-50"
           >
-            {t('form.firstname')}<span className="text-red-500 dark:text-gray-50">*</span>
+            {t('form.firstname')}<span className="text-red-500 dark:text-gray-50"></span>
           </label>
           <input
             type="text"
@@ -155,7 +155,7 @@ export default function ContactUs() {
             htmlFor="lastname"
             className="text-gray-500 font-light mt-8 dark:text-gray-50"
           >
-            {t('form.lastname')}<span className="text-red-500 dark:text-gray-50">*</span>
+            {t('form.lastname')}<span className="text-red-500 dark:text-gray-50"></span>
           </label>
           <input
             type="text"
@@ -174,7 +174,7 @@ export default function ContactUs() {
             htmlFor="email"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            {t('form.email')}<span className="text-red-500">*</span>
+            {t('form.email')}<span className="text-red-500"></span>
           </label>
           <input
             type="email"
@@ -193,7 +193,7 @@ export default function ContactUs() {
             htmlFor="subject"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            {t('form.subject')}<span className="text-red-500">*</span>
+            {t('form.subject')}<span className="text-red-500"></span>
           </label>
           <input
             type="text"
@@ -211,7 +211,7 @@ export default function ContactUs() {
             htmlFor="message"
             className="text-gray-500 font-light mt-4 dark:text-gray-50"
           >
-            {t('form.message')}<span className="text-red-500">*</span>
+            {t('form.message')}<span className="text-red-500"></span>
           </label>
           <textarea
             name="message"
