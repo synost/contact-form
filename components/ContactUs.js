@@ -98,6 +98,7 @@ export default function ContactUs() {
   };
   return (
     <main>
+      <body className="bg-[#fffefe] dark:bg-black"></body>
       <nav className="flex flex-row justify-between items-center p-8 bg-blue-50 dark:bg-black">
         <div className="relative flex flex-row space-x-2 items-center">
           <div className="absolute top-0 left-1">
@@ -126,7 +127,7 @@ export default function ContactUs() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-[#202027]"
+          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-[#1a1a1a]"
         >
           <h1 className="text-2xl font-bold dark:text-gray-50">
           {t('form.title')}
@@ -227,7 +228,7 @@ export default function ContactUs() {
           <div className="flex flex-row items-center justify-start">
             <button
               type="submit"
-              className="px-8 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center dark:bg-[#2e2e38]"
+              className="px-8 mt-8 py-2 bg-[#202027] text-gray-50 font-light rounded-md text-lg flex flex-row items-center dark:bg-[#2e2e38]"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             </button>
