@@ -98,7 +98,7 @@ export default function ContactUs() {
   };
   return (
     <main>
-      <nav className="flex flex-row justify-between items-center p-8 bg-blue-50 dark:bg-blue-900">
+      <nav className="flex flex-row justify-between items-center p-8 bg-blue-50 dark:bg-black">
         <div className="relative flex flex-row space-x-2 items-center">
           <div className="absolute top-0 left-1">
           <Image src={profilePic} alt="Logo" width={33} height={33}/>
@@ -114,7 +114,7 @@ export default function ContactUs() {
             </a>
         </div>  
       </nav>
-      <header className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 lg:px-40 bg-blue-50 dark:bg-blue-900 md:h-96">
+      <header className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 lg:px-40 bg-blue-50 dark:bg-black md:h-96">
         <div className="mx-auto mb-10 md:mt-20">
           <h1 className="text-4xl font-bold mt-4 dark:text-gray-50 text-gray-700">
             {t('welcome.title')}
@@ -126,7 +126,7 @@ export default function ContactUs() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
+          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-[#1c1c22]"
         >
           <h1 className="text-2xl font-bold dark:text-gray-50">
           {t('form.title')}
