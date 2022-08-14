@@ -56,7 +56,6 @@ export default function ContactUs() {
     let isValidForm = handleValidation();
 
     if (isValidForm) {
-      setButtonText(t('form.sending'));
       const res = await fetch("/api/send", {
         body: JSON.stringify({
           email: email,
